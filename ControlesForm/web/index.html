@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{background-color: azure;
+                    font-family: sans-serif;}
+            form{
+                width: 50%;
+                margin: 0 auto;
+                background-color: cornflowerblue;
+                padding: 20px;
+            }
+            #cred{background-color: cornflowerblue;}
+            #otros{background-color: gainsboro;}
+            legend{margin-bottom:25px;
+                   margin-left: -12px;
+                    background-color:activecaption;
+                    width: 100.6%;
+                    padding:0 10px;
+                   }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Inicio de sección</h1>
+        <h2>Introduce las credenciales de acceso</h2>
+        <form method = "post" action="dulce-lunes">
+            <fieldset id="cred">
+                <legend>Credenciales</legend>
+            <input type="text" name="user" id="user" placeholder="Introduce el login">
+            <input type="password" name="pwd" placeholder="Introduce el password">
+            </fieldset>
+            <fieldset id="otros">
+                <legend>Otros datos</legend>
+            <label>Seleccione su departamento</label>
+            <select name="dpto" multiple>
+                <optgroup label="Dpto principales">
+                <option value="Compras">Compras</option>
+                <option value="RRHH">RRHH</option>
+                </optgroup>
+                <optgroup label="depto secundarios">
+                <option value="Ventas">Ventas</option>
+                <option value="Financeiro">Financeiro</option>
+                 </optgroup>
+            </select>
+            <label>Observaciones:</label>
+            <textarea name ="obsv" cols="30" rows="10">
+            </textarea>
+            </fieldset>
+            <button type="submit">Enviar</button>
+            
+        </form>
+    </body>
+</html>

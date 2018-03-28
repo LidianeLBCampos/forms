@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <style>
+        label {
+            position: relative;
+            top: -5px;
+            border: 1px solid #ccc;
+            padding: 4px;
+            background: #eee;
+            border-radius: 4px;
+        }
+        #visualizador { font: 3em Verdana, sans-serif; }
+</style>
+  <script>
+        var rango, vis;
+        window.onload = function() {
+            rango = document.getElementById('rango');
+            vis = document.getElementById('visualizador');
+            vis.innerHTML = rango.value;
+            rango.addEventListener('change', mostrar);
+        };
+        function mostrar() { var valor = rango.value; vis.innerHTML = valor; }
+            </script>
+    </head>
+    <body>
+         
+    <form action="#">
+        <label> Indica um lenguaje de programación
+            <input type="text" list="lenguajes">
+        </label>
+        <datalist id="lenguajes">
+            <option value ="A">
+             <option value ="B">
+              <option value ="C">
+               <option value ="D">
+                <option value ="E">
+                 <option value ="F">
+                  <option value ="G">
+        </datalist>
+        <label for="rango">Volumen</label>
+        <input id="rango" type="range" min="1" max="100" step="1">
+        <span id="visualizador"></span>      
+    </form>
+     
+
+</body>
+
+</html>

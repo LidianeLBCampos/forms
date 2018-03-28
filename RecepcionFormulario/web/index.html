@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios 1 </title>
+    <script src="js/app.js"></script>
+    <style>
+        form{
+        border: 1px solid #888;
+        margin: 0 auto;
+        width: 40%;
+        padding: 25px;
+        background-color: beige;
+        border-radius: 7px;
+        }
+        label {
+            font-family: sans-serif;
+            letter-spacing: 2px;
+        }
+        input[type=text] {
+            width: 300px;
+            height: 20px;
+            margin-bottom: 20px;
+            height: 22px;
+            display: block;
+        }
+        
+        input[type=submit][type=button]{
+            width: 200px;
+            height: 30px;
+           display: block;
+           margin: 0 auto;
+            margin-top: 30px;
+        }
+        #msj {
+             display: none;
+             border: 1px solid #888;
+             border-radius: 7px;
+             padding: 5px;
+             color: lightcoral;
+        }
+        
+    </style>
+</head>
+<body>
+    <Form action="alta" method="post" onsubmit="return validar()">
+        <label for="nombre">Nombre</label>
+        <input required id="nombre" type="text" name="nombre">
+   
+    <label for="ape">Apellido</label>
+    <input required id="ape" type="text" name="apellidos">
+    
+    <label><input  type="radio" name="genero" value="H">Mujer</label>
+    <label><input  type="radio" name="genero" value="V">Hombre</label>
+    
+    <div id="msj"></div>
+    
+    <p>Indica cómo contactarte:</p>
+    <label><input type="checkbox" name="contacto" value="email">e-mail</label>
+    <label><input type="checkbox" name="contacto" value="tel">Teléfono</label>
+    <label><input type="checkbox" name="contacto" value="carta">Carta</label>
+    <input type="submit">
+    
+    <input id="info" type="button" value="Info Legal">
+   </Form>
+    
+</body>
+</html>
